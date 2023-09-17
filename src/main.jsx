@@ -47,7 +47,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
         <RecoilRoot>
             <LanguageAwareMain>
-                <RouterProvider router={router} />
+                <RouterProvider router={router}>
+                    <Home />
+                </RouterProvider>
             </LanguageAwareMain>
         </RecoilRoot>
     </React.StrictMode>
