@@ -9,34 +9,39 @@ import "../index.scss";
 const Layout = lazy(() => import("./layout/Layout"));
 const Home = lazy(() => import("./pages/Home"));
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+    [
+        {
+            element: (
+                <Suspense fallback={""}>
+                    <Layout />
+                </Suspense>
+            ),
+            children: [
+                { path: "*", element: <h1>404</h1> },
+                {
+                    path: "/ka",
+                    element: (
+                        <Suspense fallback={""}>
+                            <Home />
+                        </Suspense>
+                    ),
+                },
+                {
+                    path: "/en",
+                    element: (
+                        <Suspense fallback={""}>
+                            <Home />
+                        </Suspense>
+                    ),
+                },
+            ],
+        },
+    ],
     {
-        element: (
-            <Suspense fallback={""}>
-                <Layout />
-            </Suspense>
-        ),
-        children: [
-            { path: "*", element: <h1>404</h1> },
-            {
-                path: "/ka",
-                element: (
-                    <Suspense fallback={""}>
-                        <Home />
-                    </Suspense>
-                ),
-            },
-            {
-                path: "/en",
-                element: (
-                    <Suspense fallback={""}>
-                        <Home />
-                    </Suspense>
-                ),
-            },
-        ],
-    },
-]);
+        basename: "/museum",
+    }
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
