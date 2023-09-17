@@ -1,0 +1,100 @@
+.CardWithDesc {
+    display: flex;
+    background-color: #181919;
+    width: 47%;
+    height: 600px;
+
+    @media (max-width: 768px) {
+        border-radius: 6px;
+        width: 300px;
+        height: 400px;
+    }
+
+    a {
+        display: flex;
+        text-decoration: none;
+    }
+
+    &:hover {
+        .CardWithDesc-Image img {
+            scale: 1.1;
+        }
+
+        .CardWithDesc-Body div h2 {
+            color: rgb(221, 196, 51);
+        }
+    }
+
+    &-Body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        padding-inline: 30px;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+
+        div {
+            h2 {
+                margin-bottom: 0;
+                font-weight: 400;
+                font-size: 2.2rem;
+                line-height: 2.4rem;
+                letter-spacing: -1px;
+                transition: color 0.3s ease-in-out;
+            }
+
+            p {
+                font-weight: 300;
+                font-size: 1.2rem;
+                line-height: 1.7rem;
+                max-height: 22.4rem;
+                margin-bottom: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 13;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+
+    &-Link {
+        display: flex;
+        justify-content: flex-end;
+
+        span {
+            font-weight: 100;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.281);
+            transition: border-bottom 0.2s ease-in-out,
+                font-weight 0.1s ease-in-out;
+
+            &:hover {
+                font-weight: 300;
+                border-bottom-color: white;
+            }
+        }
+    }
+
+    &-Image {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        img {
+            transition: scale 0.3s ease-in-out;
+
+            @media (max-width: 768px) {
+                width: 300px;
+                height: 400px;
+            }
+        }
+    }
+}

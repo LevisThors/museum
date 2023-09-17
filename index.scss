@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap");
+
+@font-face {
+    font-family: "BPG Nino Mtavruli";
+    src: url("./src/assets/fonts/bpg_nino_mtavruli_book.ttf");
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#root {
+    overflow: hidden;
+}
