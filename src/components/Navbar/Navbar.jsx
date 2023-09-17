@@ -18,7 +18,7 @@ export default function NavbarComponent() {
     const languagePackage = navbarPack()[language];
 
     useEffect(() => {
-        setLanguage(location.pathname.split("/")[1]);
+        // setLanguage(location.pathname.split("/")[1]);
     });
 
     const handleLanguageChange = (e) => {
