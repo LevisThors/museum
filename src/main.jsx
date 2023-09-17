@@ -18,7 +18,7 @@ const router = createBrowserRouter(
                 </Suspense>
             ),
             children: [
-                { path: "*", element: <h1>404</h1> },
+                { path: "*", element: <Home /> },
                 {
                     path: "/ka",
                     element: (
