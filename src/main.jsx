@@ -38,18 +38,14 @@ const router = createBrowserRouter(
             ],
         },
     ],
-    {
-        basename: "/museum",
-    }
+    { basename: "/museum" }
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
         <RecoilRoot>
             <LanguageAwareMain>
-                <RouterProvider router={router}>
-                    <Home />
-                </RouterProvider>
+                <RouterProvider router={router} />
             </LanguageAwareMain>
         </RecoilRoot>
     </React.StrictMode>
