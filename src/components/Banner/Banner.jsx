@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTicket } from "@fortawesome/free-solid-svg-icons";
-import BannerVideo from "../../assets/bannerVideo.mp4";
 import Banner from "../../assets/banner.svg";
 import { useIsMobile } from "../../util/useIsMobile";
 import { useRecoilState } from "recoil";
@@ -62,7 +61,7 @@ export default function BannerComponent() {
                             loop
                             onCanPlay={() => setVideoLoaded(true)}
                         >
-                            <source src={BannerVideo} type="video/mp4" />
+                            <source src="https://www.youtube.com/watch?v=dp5DCZrcUmM" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         <div className="Banner-Overlay"></div>
