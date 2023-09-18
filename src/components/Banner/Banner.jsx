@@ -6,6 +6,7 @@ import Banner from "../../assets/banner.svg";
 import { useIsMobile } from "../../util/useIsMobile";
 import { useRecoilState } from "recoil";
 import { languageState } from "../../state/languageState";
+import BannerVideo from "../../assets/bannerVideo.mp4";
 import navbarPack from "../../i18n/hardcodedData";
 
 import "./Banner.scss";
@@ -61,7 +62,7 @@ export default function BannerComponent() {
                             loop
                             onCanPlay={() => setVideoLoaded(true)}
                         >
-                            <source src="https://www.youtube.com/watch?v=dp5DCZrcUmM" type="video/mp4" />
+                            <source src={BannerVideo} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                         <div className="Banner-Overlay"></div>
